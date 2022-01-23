@@ -9,6 +9,57 @@
     <script src="script.js"></script>
 </head>
 <body>
-    
+    <div>
+        <h1>Passinho do Romano</h1>
+        <h2>Subtítulo engraçadinho</h2>
+    </div>
+
+    <fieldset>
+    <form action="/action_page.php" method="post"> 
+        <h3>Decifra-me ou te devoro!</h3>
+        <div>
+            <!-- Entrada de texto -->
+            <textarea name="entrada" rows="10" cols="50" placeholder="Insira aqui o texto que você quer codificar:""></textarea>
+        </div>
+       
+        <div>
+            <!-- Campo de seleção: Cifra de César ou Base64 -->
+            <label for="cod">Escolha o código:</label>
+            <select>
+                <option value="cesar">Cifra de César</option>
+                <option value="base">Base64</option>
+            </select>
+        </div>
+
+        <!-- Campo de incremento quando selecionado o cifra de césar  -->
+
+        <div>
+            <!-- Entradas de radio buttons -->
+            <input type="radio" name="codificar" value="codificar">
+            <label for="codificar">Codificar</label>
+            <input type="radio" name="decodificar" value="decodificar">
+            <label for="decodificar">Decodificar</label>
+        </div>
+
+        <div>
+            <!-- botão de ação -->
+            <button>Botão</button>
+        </div>
+
+        <div>
+            <!-- Caixa com saída de texto -->
+            <textarea name="saida" rows="10" cols="50"></textarea>
+        </div>
+    </form>
+
+    <footer>
+        <p p class="copy">
+            <span">©2021 - Camille Monteiro - Todos os direitos reservados.</span><br>
+        </p>
+        <p class="icons">
+            <span><a href="https://github.com/camimonteiro"><img class="github" src="https://raw.githubusercontent.com/camimonteiro/Project_AdoteAqui/main/Imagens/GitHub.png"></a>
+            <a href="https://www.linkedin.com/in/camillemonteiro/"><img class="linkedin" src="https://raw.githubusercontent.com/camimonteiro/Project_AdoteAqui/main/Imagens/LinkedIn.png"></a></span>
+        </p>
+    </footer>
 </body>
 </html>
