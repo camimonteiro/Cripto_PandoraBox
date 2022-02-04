@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício - Passinho do Romano</title>
+    <title>Cripto-Passinho do Romano</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;1,300&family=Neonderthaw&display=swap" rel="stylesheet">
+    
+    <!-- JS -->
     <script src="script.js"></script>
 </head>
 <body>
-    <div>
-        <h1>Passinho do Romano</h1>
-        <h2>Subtítulo engraçadinho</h2>
-    </div>
-
-    <fieldset>
+    <fieldset class="forms" name="formulario">
     <form action="/action_page.php" method="post"> 
-        <h3>Decifra-me ou te devoro!</h3>
-        <div>
+        <h1>Decifra-me ou te devoro!</h1>
+        <div class="entrada">
             <!-- Entrada de texto -->
             <textarea name="entrada" rows="10" cols="50" placeholder="Insira aqui o texto que você quer codificar:""></textarea>
         </div>
        
-        <div>
+        <div class="escolhas">
             <!-- Campo de seleção: Cifra de César ou Base64 -->
             <label for="cod">Escolha o código:</label>
             <select>
@@ -33,7 +36,7 @@
             <!-- Campo de incremento quando selecionado o cifra de césar  -->
             <label for="incremento">Qual o parâmetro?</label>
             <input type="number" name="incremento">
-        <div>
+        <div class="tipoAcao">
             <!-- Entradas de radio buttons -->
             <input type="radio" name="codificar" value="codificar">
             <label for="codificar">Codificar</label>
@@ -41,16 +44,17 @@
             <label for="decodificar">Decodificar</label>
         </div>
 
-        <div>
+        <div class="botao">
             <!-- botão de ação -->
             <button>Botão</button>
         </div>
 
-        <div>
+        <div class="saida">
             <!-- Caixa com saída de texto -->
             <textarea name="saida" rows="10" cols="50"></textarea>
         </div>
     </form>
+    </fieldset>
 
     <footer>
         <p p class="copy">
