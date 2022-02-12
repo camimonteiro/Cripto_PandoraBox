@@ -7,19 +7,19 @@
     <title>Cripto-Passinho do Romano</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/CSS/style.css">
-
+    
     <!-- Fonts do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;1,300&family=Neonderthaw&display=swap" rel="stylesheet">
 </head>
 <body>
-    <fieldset class="forms" name="formulario"></fieldset>
-        <form action="/action_page.php" method="post"> 
+    <form class="forms" name="formulario">
+        <fieldset> 
             <h1>Decifra-me ou te devoro!</h1>
             <div class="entrada">
                 <!-- Entrada de texto -->
-                <textarea name="texto" value="texto" rows="10" cols="50" placeholder="Insira aqui o texto que você quer codificar:""></textarea>
+                <textarea name="texto" value="texto" rows="5" cols="40" placeholder="Insira aqui o texto que você quer codificar/decodificar:""></textarea>
             </div>
        
             <div class="escolhas">
@@ -31,12 +31,8 @@
                     <option value="base64" id="base64">Base64</option>
                 </select>
             </div>
-            <div class="incremento" style="display: none" id="incremento">
-                <!-- Campo de incremento quando selecionado o cifra de césar  -->
-                <label for="incremento" id="inputIncrem">Qual o parâmetro?</label>
-                <input type="number" id="qtdIncremento" name="incremento" defaut="0" min="1" value="1">
-            </div>
-           
+            
+            <div id="incremento"></div>
             <div class="tipoAcao">
                 <!-- Entradas de radio buttons -->
                 <input type="radio" name="codificar" value="codificar" class="radioBtn">
@@ -52,16 +48,13 @@
 
             <div class="saida">
                 <!-- Caixa com saída de texto -->
-                <textarea id="textoFinal" name="saida" placeholder="Sua mensagem final aparecerá aqui!" rows="10" cols="50"></textarea>
+                <textarea id="textoFinal" name="saida" placeholder="Sua mensagem final aparecerá aqui!" rows="5" cols="40"></textarea>
             </div>
-        </form>
-    </fieldset>
-
-<!-- JS -->
-<script src="/JS/script.js"></script>
-<script src="/JS/incremento.js"></script>
-<script src="/JS/escolhatexto.js"></script>
-
+        </fieldset>
+    </form>
+    <!-- JS -->
+    <script src="./JS/script.js"></script>
+    <script src="./JS/escolhatexto.js"></script>
     <footer>
         <p p class="copy">
             <span">©2021 - Camille Monteiro - Todos os direitos reservados.</span><br>
