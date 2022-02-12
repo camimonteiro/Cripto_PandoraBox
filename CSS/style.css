@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    background-image: url(https://media4.giphy.com/media/l3q2XB76CaWPggiNW/giphy.gif?cid=ecf05e47sj5f3o29tyrp5i50cbr257h4873vksltp0iwvurm&rid=giphy.gif&ct=g);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    img
+    opacity: 100%;
+}
+
+fieldset {
+    background-color: darkgray;
+    margin: 0px 100px 0px 100px;
+}
+form {
+    display: flexbox;
+    flex-wrap: wrap;
+
+    align-items: center;
+    text-align: center;
+}
+
+form  h1 {
+    font-family: 'Neonderthaw', cursive;
+    font-size: 60pt;
+    color:deeppink;
+    text-align: center;
+    margin: 0;
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}

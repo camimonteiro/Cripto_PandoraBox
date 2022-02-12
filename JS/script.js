@@ -1,18 +1,3 @@
-// Insere o incremento da Cifra de César!
-let incrementoCifra = document.querySelector(" ");
-
-incrementoCifra.addEventListener ("muda", function (evento) {
-    evento.preventDefault ();
-
-    let valorIncremento = document.getElementById ("valorInc");
-
-    if (evento.target.value == "cifraCesar") {
-        valorIncremento.style = "display: flex";
-    } else {
-        valorIncremento.style = "display: none";
-    };
-});
-
 // Criptografia
 const formulario = document.forms.formulario;
 
@@ -20,32 +5,32 @@ formulario.addEventListener ("enviar", function (evento){
     evento.preventDefault ();
 
     let texto = formulario.texto.value;
-    const escolha = formulario.tipoAcao.value;
+    const escolha = formulario.escolha.value;
     const botoes = formulario.tipoAcao.value;
     let qtdIncremento = formulario.qtdIncremento.value;
     let mensagem = "";
 
     if (escolha == "cifraCesar") {
-        mensagem = cesar(botoes, texto, qtdIncremento);
+        mensagem = cifraCesar(botoes, texto, qtdIncremento);
     } else {
         mensagem = base64 (botoes, texto);
     };
 
-    let saidaTexto = documento.getElementById("saidaTexto");
-    saidaTexto.innerHTML = `${mensagem}`;
+    let saidaTexto = documento.getElementById("textoFinal");
+    textoFinal.innerHTML = `${mensagem}`;
 });
 
 // Cifra de César - lógica
 
-function cifraCesar (codific, texto, qtdIncremento) {
-    qtdIncremento = Number (qtdIncremento);
+function cifraCesar (codificar, texto, qtdIncremento) {
+    qtdIncremento = Number(qtdIncremento);
     let mensagem = "";
 
     for (let i = 0; i < texto.length; i++) {
         let letra = texto[i];
         let cod = letra.charCodeAt ();
 
-        if (codific == "codicicar") {
+        if (codificar == "codificar") {
             cod += qtdIncremento;
         } else {
             cod -= qtdIncremento;
@@ -57,8 +42,8 @@ function cifraCesar (codific, texto, qtdIncremento) {
 
 // Base 64 - lógica
 
-function base64 (codific, texto) {
-    if (codific == "codificar") {
+function base64 (codificar, texto) {
+    if (codificar == "codificar") {
         return btoa (texto);
     } else {
         return atob (texto);

@@ -6,55 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cripto-Passinho do Romano</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
 
     <!-- Fonts do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;1,300&family=Neonderthaw&display=swap" rel="stylesheet">
-    
-    <!-- JS -->
-    <script src="script.js"></script>
 </head>
 <body>
-    <fieldset class="forms" name="formulario">
-    <form action="/action_page.php" method="post"> 
-        <h1>Decifra-me ou te devoro!</h1>
-        <div class="entrada">
-            <!-- Entrada de texto -->
-            <textarea name="entrada" rows="10" cols="50" placeholder="Insira aqui o texto que você quer codificar:""></textarea>
-        </div>
+    <fieldset class="forms" name="formulario"></fieldset>
+        <form action="/action_page.php" method="post"> 
+            <h1>Decifra-me ou te devoro!</h1>
+            <div class="entrada">
+                <!-- Entrada de texto -->
+                <textarea name="texto" value="texto" rows="10" cols="50" placeholder="Insira aqui o texto que você quer codificar:""></textarea>
+            </div>
        
-        <div class="escolhas">
-            <!-- Campo de seleção: Cifra de César ou Base64 -->
-            <label for="cod">Escolha o código:</label>
-            <select>
-                <option value="cesar">Cifra de César</option>
-                <option value="base">Base64</option>
-            </select>
-        </div>
-            <!-- Campo de incremento quando selecionado o cifra de césar  -->
-            <label for="incremento">Qual o parâmetro?</label>
-            <input type="number" name="incremento">
-        <div class="tipoAcao">
-            <!-- Entradas de radio buttons -->
-            <input type="radio" name="codificar" value="codificar">
-            <label for="codificar">Codificar</label>
-            <input type="radio" name="decodificar" value="decodificar">
-            <label for="decodificar">Decodificar</label>
-        </div>
+            <div class="escolhas">
+                <!-- Campo de seleção: Cifra de César ou Base64 -->
+                <label for="option">Escolha o tipo de código:</label>
+                <select name="escolha" class="escolha" id="escolha" required>
+                    <option value="-----" id="-----" disabled selected>-----</option>
+                    <option value="cifraCesar" id="cifraCesar">Cifra de César</option>
+                    <option value="base64" id="base64">Base64</option>
+                </select>
+            </div>
+            <div class="incremento" style="display: none" id="incremento">
+                <!-- Campo de incremento quando selecionado o cifra de césar  -->
+                <label for="incremento" id="inputIncrem">Qual o parâmetro?</label>
+                <input type="number" id="qtdIncremento" name="incremento" defaut="0" min="1" value="1">
+            </div>
+           
+            <div class="tipoAcao">
+                <!-- Entradas de radio buttons -->
+                <input type="radio" name="codificar" value="codificar" class="radioBtn">
+                <label for="codificar">Codificar</label>
+                <input type="radio" name="codificar" value="decodificar" class="radioBtn">
+                <label for="decodificar">Decodificar</label>
+            </div>
 
-        <div class="botao">
-            <!-- botão de ação -->
-            <button>Botão</button>
-        </div>
+            <div class="botao">
+                <!-- botão de ação -->
+                <button type="submit" class="btn" name="btn" id="enviar">Codificar mensagem!</button>
+            </div>
 
-        <div class="saida">
-            <!-- Caixa com saída de texto -->
-            <textarea name="saida" rows="10" cols="50"></textarea>
-        </div>
-    </form>
+            <div class="saida">
+                <!-- Caixa com saída de texto -->
+                <textarea id="textoFinal" name="saida" placeholder="Sua mensagem final aparecerá aqui!" rows="10" cols="50"></textarea>
+            </div>
+        </form>
     </fieldset>
+
+<!-- JS -->
+<script src="/JS/script.js"></script>
+<script src="/JS/incremento.js"></script>
+<script src="/JS/escolhatexto.js"></script>
 
     <footer>
         <p p class="copy">
