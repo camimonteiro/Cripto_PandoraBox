@@ -1,19 +1,30 @@
-# Cripto_PandoraBox: Decifra-me ou te devoro! 🔐
+# 🔑 Cripto_PandoraBox: Decifra-me ou te devoro! 🕋
 
 <div id="inicio" align=center>
   <a href="#sobre">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;
+  <a href="screenshots">Screenshots</a>&nbsp;&nbsp;&nbsp;
   <a href="#linguagens">Linguagens Utilizadas</a>&nbsp;&nbsp;&nbsp;
   <a href="#contato">Contato</a> 
 </div><br>
 
 <h2>Progresso do Projeto 📈</h2><br>
 
-<img src="https://raw.githubusercontent.com/camimonteiro/Game_SaidaEscarlate/main/Images/90%25.png" height="40em"><br>
+<img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/100%25.png" height="40em"><br>
 
 <h2 id="sobre">Sobre o projeto 🔎</h2>
-<p> Cripto - PandoraBox é uma ferramenta de criptografia de texto utilizando dois códigos: Base 64 e Cifra de César, como opções para criptografar a mensagem. A ferramenta permite que os textos sejam tanto criptografados quanto descriptografados.<br>
+<p> Cripto - PandoraBox é uma ferramenta de criptografia de texto utilizando dois códigos: Base 64 e Cifra de César, como opção para criptografar a mensagem. A ferramenta permite que os textos sejam tanto criptografados quanto descriptografados.<br>
 
-Esse projeto foi desenvolvido para fins educativos pela autora.</p>
+<strong>E ai quem vai ter coragem de abrir essa PandoraBox?</strong>
+
+Esse projeto foi desenvolvido para fins educativos.</p>
+
+<h2 id="screenshots">Screenshots 📸</h2>
+
+<img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/Foto%201.png" height="50%"><br>
+
+<img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/Foto%202.png" height="50%"><br>
+
+<img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/Foto%203.png" height="50%"><br>
 
 
 <h2 id="linguagens">Softwares & Ferramentas utilizadas nesse projeto 📚</h2>
@@ -21,6 +32,7 @@ Esse projeto foi desenvolvido para fins educativos pela autora.</p>
 - [x] HTML5
 - [x] CSS3
 - [x] JavaScript
+- [x] DOM
 - [x] Git
 
 <hr>
