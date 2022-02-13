@@ -1,85 +1,71 @@
-// Criptografia
-const formulario = document.forms.formulario;
-const incrementoChave = document.createElement ('chave')
+
+const formulario = document.querySelector ('forms')
+const textoEntrada = document.getElementById ('textoEntrada');
+const escolha = document.getElementById ('escolha');
+const botoes = document.querySelectorAll ('tipoAcao');
+const incrementoChave = document.createElement ('chave');
     incrementoChave.id = 'cifra'
     incrementoChave.type = 'numero'
     incrementoChave.placeholder = 'Digite o código!'
+const envio = document.getElementById ('enviar');
+let mensagemSaida = document.getElementById ('textoFinal');
 
-formulario.addEventListener ('enviar', function (evento){
-    evento.preventDefault();
-
-    const texto = formulario.texto.value;
-    const escolha = formulario.escolha.value;
-    const botoes = formulario.tipoAcao.value;
-    let mensagem = "";
-
-    if (escolha == 'cifraCesar') {
-        mensagem = cifraCesar(botoes, texto, incrementoChave);
-    } else {
-        mensagem = base64 (botoes, texto);
-    };
-
-    let saidaTexto = documento.getElementById('textoFinal');
-    saidaTexto.innerHTML = `${mensagem}`;
+// Insere o incremento da Cifra de César!
+document.querySelectorAll ('select').forEach((select) => {
+    select.addEventListener ('change', (event) => {
+        const evento = event.target;
+        const valorIncremento = document.getElementById ('incremento');
+        
+        evento.value === 'cifraCesar' ? valorIncremento.appendChild(incrementoChave) : incrementoChave.remove();
+    })
 });
+    
 
 // Cifra de César - lógica
 
-function cifraCesar (codificar, texto, incrementoChave) {
+function cifraCesar (textoEntrada, incrementoChave, botoes) {
     incrementoChave = Number(incrementoChave);
-    let mensagem = "";
+    let mensagemSaida = "";
 
-    for (let i = 0; i < texto.length; i++) {
-        let letra = texto[i];
+    for (let i = 0; i < textoEntrada.length; i++) {
+        let letra = textoEntrada[i];
         let cod = letra.charCodeAt();
 
-        if (codificar == 'codificar') {
+        if (botoes == 'codificar') {
             cod += incrementoChave;
         } else {
             cod -= incrementoChave;
         };
-        mensagem += String.fromCharCode(cod);
+        mensagemSaida += String.fromCharCode(cod);
     };
-    return mensagem;
+    return mensagemSaida;
 };
 
 // Base 64 - lógica
 
-function base64 (codificar, texto) {
-    if (codificar == 'codificar') {
-        return btoa (texto);
+function base64 (textoEntrada, botoes) {
+    if (botoes == 'codificar') {
+        return btoa (textoEntrada);
     } else {
-        return atob (texto);
+        return atob (textoEntrada);
     };
 };
 
 // Mostra o resultado final
-const mostra = (conteudo) => texto.innerText = conteudo ; textoFinal.appendChild( texto );
-
-
-// Insere o incremento da Cifra de César!
-document.querySelectorAll('select').forEach(select) => {
-
-    select.addEventListener ('change', (event) => {
-        const evento = event.target;
-        const valorIncremento = document.getElementById ("incremento");
-        
-        evento.value === 'cifraCesar' ? valorIncremento.appendChild(incrementoChave) : incrementoChave.remove();
-    }
-};
+const mostra = (conteudo) => textoEntrada.innerText = conteudo ; mensagemSaida.appendChild(textoEntrada);
 
 // Checagem de preenchimento de todos os campos
-botao.addEventListener( 'click', () => {
+envio.addEventListener( 'click', () => {
 
-    !texto.value ? (
+    !textoEntrada.value ? (
         alert ('O campo de mensagem é obrigatório!')
-    ) : codigo.value === 'cifraCesar' && !incrementoChave.value ? (
+    ) : escolha.value === 'cifraCesar' && !incrementoChave.value ? (
         alert( 'Você tem que escolher a chave!')
-    ) : codigo.value === 'base64' && texto.value? (
-        exibeNaTela(base64())
-    ) : codigo.value === 'cifraCesar' && texto.value ? (
-        exibeNaTela(cifraCesar())
+    ) : escolha.value === 'base64' && textoEntrada.value? (
+        mostra(base64())
+    ) : escolha.value === 'cifraCesar' && textoEntrada.value ? (
+        mostra(cifraCesar())
     ) : (
         alert ( 'Você precisa escolher o tipo do código!')
     )
-})
+});
