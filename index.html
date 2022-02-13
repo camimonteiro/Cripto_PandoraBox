@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Neonderthaw&family=Satisfy&display=swap" rel="stylesheet">
+   
     <title>Cripto - PandoraBox</title>
+    
     <!-- CSS -->
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    
     <!-- JS -->
     <script src="./JS/script.js"></script>
     <script src="./JS/incremento.js"></script>
-    
 </head>
 <body>
     <section class="forms" name="formulario"> 
             <h1>Decifra-me ou te devoro!</h1>
             <div class="entrada">
                 <!-- Entrada de texto -->
-                <textarea name="texto" id="textoEntrada" rows="5" cols="40" placeholder="Insira aqui o texto que você quer codificar/decodificar:"></textarea>
+                <textarea name="texto" id="textoEntrada" rows="2" cols="80" placeholder="Insira aqui o texto que você quer codificar/decodificar:"></textarea>
             </div>
        
             <div class="escolhas">
@@ -32,7 +39,7 @@
             </div>
             
             <div id="incremento" style="display: none">
-                <label>Digite a chave:</label>
+                <label>Digite a chave >>>></label>
                 <input type="number" min="0" step="1" id="chaveNumber" display="none">
             </div>
 
@@ -49,7 +56,7 @@
 
             <div class="saida">
                 <!-- Caixa com saída de texto -->
-                <textarea id="textoFinal" name="saida" placeholder="Sua mensagem final aparecerá aqui!" rows="5" cols="40"></textarea>
+                <textarea id="textoFinal" name="saida" placeholder="Sua mensagem final aparecerá aqui!" rows="2" cols="80"></textarea>
             </div>
     </section>
     <script src="./JS/escolhatexto.js"></script>

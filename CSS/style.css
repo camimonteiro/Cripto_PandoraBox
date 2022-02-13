@@ -1,45 +1,147 @@
-body {
-    height: 100vh;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
     background-image: url(https://media4.giphy.com/media/l3q2XB76CaWPggiNW/giphy.gif?cid=ecf05e47sj5f3o29tyrp5i50cbr257h4873vksltp0iwvurm&rid=giphy.gif&ct=g);
     background-position: center;
-    background-size: cover;
+    background-size: 100em;
     background-repeat: no-repeat;
-    img
-    opacity: 100%;
 }
 
-section {
-    background-color: darkgray;
-    margin: 0px 100px 0px 100px;
+body {
+    height: 100% ;
+    width: 100%;
+    padding: 0;
 }
+
 .forms {
+    height: 70%;
+    background:rgba(119, 171, 248, 0.4);
+    backdrop-filter: blur (10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flexbox;
     flex-wrap: wrap;
-
     align-items: center;
     text-align: center;
+    padding: 2%;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 5px;
 }
 
 h1 {
     font-size: 60pt;
-    color:deeppink;
+    color:white;
     text-align: center;
     margin: 0;
-
+    font-family: 'Satisfy', cursive;
+    -webkit-text-stroke: 0.005px; 
+    -webkit-text-stroke-color: deeppink ;
+    text-shadow: 0 0 0.2em deeppink, 0 0 0.2em deeppink;
 }
-
-h2 {
-
+.escolhas{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Didact Gothic', sans-serif;
+    box-shadow: 0 0 0.2em deeppink, 0 0 0.2em deeppink;
+    color: deeppink;
+    background-color: white;
+    padding: 0px;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
 }
-
-h3 {
-
-}
-
-select{
-    border:3px solid rgb(238, 237, 236);
+#escolha {
+    border:3px solid deeppink;
     border-radius: 11px;
     font-size: 15px;
     font-weight: bold;
     padding: 3px;
-  }
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Didact Gothic', sans-serif;
+    box-shadow: 0 0 0.5em deeppink, 0 0 0.5em deeppink;
+}
+
+#incremento {
+    font-family: 'Didact Gothic', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    background-color: deeppink;
+    padding: 10px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+footer .copy {
+     background:rgba(255, 20, 147, 0.4);
+     backdrop-filter: blur (6px);
+     -webkit-backdrop-filter: blur(6px);
+     text-align: center;
+     margin-top: 20px;
+     padding: 7px;
+     margin-bottom: 0;
+     font-family: 'Didact Gothic', sans-serif;
+     color: white;
+}
+
+#textoEntrada {
+    border:3px solid rgb(238, 237, 236);
+    border-radius: 11px;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#textoFinal {
+    border:3px solid rgb(238, 237, 236);
+    border-radius: 11px;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: 2%;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.tipoAcao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: deeppink;
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+button {
+    color:deeppink;
+    margin-top: 2%;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 20px;
+    padding: 15px;
+}
+
+button:hover {
+    background-color: deeppink;
+    color: white;
+}
