@@ -1,4 +1,4 @@
-# Cripto_PandoraBox: Decifra-me ou te devoro
+# Cripto_PandoraBox: Decifra-me ou te devoro! 🔐
 
 <div id="inicio" align=center>
   <a href="#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;
@@ -22,7 +22,6 @@ Esse projeto foi desenvolvido para fins educativos como requisito para conclusã
 
 Para uma melhor visualização, recomendo <strong>utilizar computador ou notebook para jogar!</strong></p>
 
-<img src="https://raw.githubusercontent.com/camimonteiro/Game_SaidaEscarlate/main/Images/Tela%20inicial%20Jogo.png">
 
 <h2 id="linguagens">Softwares & Ferramentas utilizadas nesse projeto 📚</h2>
 
