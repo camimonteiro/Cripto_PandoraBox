@@ -7,38 +7,44 @@
     <title>Cripto - PandoraBox</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
+    <!-- JS -->
+    <script src="./JS/script.js"></script>
+    <script src="./JS/incremento.js"></script>
+    
 </head>
 <body>
     <section class="forms" name="formulario"> 
             <h1>Decifra-me ou te devoro!</h1>
             <div class="entrada">
                 <!-- Entrada de texto -->
-                <textarea name="texto" id="textoEntrada" value="texto" rows="5" cols="40" placeholder="Insira aqui o texto que você quer codificar/decodificar:"></textarea>
+                <textarea name="texto" id="textoEntrada" rows="5" cols="40" placeholder="Insira aqui o texto que você quer codificar/decodificar:"></textarea>
             </div>
        
             <div class="escolhas">
                 <!-- Campo de seleção: Cifra de César ou Base64 -->
                 <label for="option">Escolha o tipo de código:</label>
-                <select name="escolha" class="escolha" id="escolha" required>
-                    <option value="empty" disabled selected></option>
-                    <option value="cifraCesar" id="cifraCesar">Cifra de César</option>
+                <select name="escolha" id="escolha" onchange="mostraChave()" required>
+                    <option value="empty" selected></option>
                     <option value="base64" id="base64">Base64</option>
+                    <option value="cifraCesar" id="cifraCesar">Cifra de César</option>
+                    
                 </select>
             </div>
             
-            <div id="incremento"></div>
+            <div id="incremento" style="display: none">
+                <label>Digite a chave:</label>
+                <input type="number" min="0" step="1" id="chaveNumber" display="none">
+            </div>
 
             <div class="tipoAcao">
                 <!-- Entradas de radio buttons -->
-                <input type="radio" name="codificar" value="codificar" class="radioBtn" checked>
-                <label for="codificar">Codificar</label>
-                <input type="radio" name="codificar" value="decodificar" class="radioBtn">
-                <label for="decodificar">Decodificar</label>
+                <input type="radio" name="codificar" value="codificar" id="codificar">Codificar
+                <input type="radio" name="codificar" value="decodificar"id="decodificar">Decodificar
             </div>
 
             <div class="botao">
                 <!-- botão de ação -->
-                <button type="submit" class="btn" name="btn" id="enviar">Codificar mensagem!</button>
+                <button type="submit" name="btn" id="enviar" onclick="enviar()">Enviar!</button>
             </div>
 
             <div class="saida">
@@ -46,8 +52,6 @@
                 <textarea id="textoFinal" name="saida" placeholder="Sua mensagem final aparecerá aqui!" rows="5" cols="40"></textarea>
             </div>
     </section>
-    <!-- JS -->
-    <script src="./JS/script.js"></script>
     <script src="./JS/escolhatexto.js"></script>
     <footer>
         <p class="copy">

@@ -1,71 +1,63 @@
-
-const formulario = document.querySelector ('forms')
-const textoEntrada = document.getElementById ('textoEntrada');
-const escolha = document.getElementById ('escolha');
-const botoes = document.querySelectorAll ('tipoAcao');
-const incrementoChave = document.createElement ('chave');
-    incrementoChave.id = 'cifra'
-    incrementoChave.type = 'numero'
-    incrementoChave.placeholder = 'Digite o código!'
-const envio = document.getElementById ('enviar');
-let mensagemSaida = document.getElementById ('textoFinal');
-
-// Insere o incremento da Cifra de César!
-document.querySelectorAll ('select').forEach((select) => {
-    select.addEventListener ('change', (event) => {
-        const evento = event.target;
-        const valorIncremento = document.getElementById ('incremento');
-        
-        evento.value === 'cifraCesar' ? valorIncremento.appendChild(incrementoChave) : incrementoChave.remove();
-    })
-});
-    
-
-// Cifra de César - lógica
-
-function cifraCesar (textoEntrada, incrementoChave, botoes) {
-    incrementoChave = Number(incrementoChave);
-    let mensagemSaida = "";
-
-    for (let i = 0; i < textoEntrada.length; i++) {
-        let letra = textoEntrada[i];
-        let cod = letra.charCodeAt();
-
-        if (botoes == 'codificar') {
-            cod += incrementoChave;
-        } else {
-            cod -= incrementoChave;
-        };
-        mensagemSaida += String.fromCharCode(cod);
-    };
-    return mensagemSaida;
-};
-
-// Base 64 - lógica
-
-function base64 (textoEntrada, botoes) {
-    if (botoes == 'codificar') {
-        return btoa (textoEntrada);
-    } else {
-        return atob (textoEntrada);
-    };
-};
-
 // Mostra o resultado final
-const mostra = (conteudo) => textoEntrada.innerText = conteudo ; mensagemSaida.appendChild(textoEntrada);
+function enviar (){
+    const selecao = document.getElementById ('escolha'); 
+    const codificar = document.getElementById ('codificar');
+    const decodificar = document.getElementById ('decodificar');
+   
+    if (textoEntrada.value != '') {
+        const textoEntrada = document.getElementById ('textoEntrada');
+        var mensagem;
+        if (codificar.checked) {
+            mensagem = codificarMensagem (textoEntrada, selecao);
+        } else if (decodificar.checked) {
+            mensagem = decodificarMensagem (textoEntrada, selecao);
+        }
 
-// Checagem de preenchimento de todos os campos
-envio.addEventListener( 'click', () => {
+        const mensagemSaida = document.getElementById ('textoFinal');
+        mensagemSaida.value = mensagem;
+    }
+        console.log ('Mensagem inicial: ' + textoEntrada.value);
+};
 
-    !textoEntrada.value ? (
-        alert ('O campo de mensagem é obrigatório!')
-    ) : escolha.value === 'cifraCesar' && !incrementoChave.value ? (
-        alert( 'Você tem que escolher a chave!')
-    ) : escolha.value === 'base64' && textoEntrada.value? (
-        mostra(base64())
-    ) : escolha.value === 'cifraCesar' && textoEntrada.value ? (
-        mostra(cifraCesar())
-    ) : (
-        alert ( 'Você precisa escolher o tipo do código!')
-    )
-});
+// Base 64 e Cifra de Cesar- lógica
+
+function codificarMensagem (textoEntrada, selecao) {
+    let textoCodificado = '';
+    if (selecao.value == 'base64') {
+        textoCodificado = btoa(textoEntrada.value);
+        console.log ('Mensagem codificada em Base64: ' + textoCodificado);
+    } else {
+        const incrementoChave = document.getElementById ('chaveNumber').value;
+        for (let i = 0; i < textoEntrada.value.length; i++) {
+            let codigo = textoEntrada.value.charCodeAt(i);
+            if (selecao.value == 'cifraCesar') {
+                codigo += incrementoChave;
+                textoCodificado += String.fromCharCode(codigo);
+            }
+            console.log ('Chave César: ' + incrementoChave);
+            console.log ('Mensagem codificada em Cifra de César: ' + textoCodificado);
+        }
+    }
+    return textoCodificado;
+};
+
+function decodificarMensagem (textoEntrada, selecao) {
+    let textoDecodificado = '';
+    if (selecao.value == 'base64') {
+        textoDecodificado = atob(textoEntrada.value);
+        console.log ('Mensagem decodificada em Base64: ' + textoDecodificado);
+    } else {
+        const incrementoChave = document.getElementById ('chaveNumber').value;
+        for (let i = 0; i < textoEntrada.value.length; i++) {
+            let codigo = textoEntrada.value.charCodeAt(i);
+            if (selecao.value == 'cifraCesar') {
+                codigo -= incrementoChave;
+                textoDecodificado += String.fromCharCode(codigo);
+            }
+            console.log(textoEntrada.value.charCodeAt(i));
+        }
+        console.log ('Chave César: ' + incrementoChave)
+        console.log ('Mensagem decodificada em Cifra de César: ' + textoDecodificado);
+    }
+    return textoDecodificado;
+};
