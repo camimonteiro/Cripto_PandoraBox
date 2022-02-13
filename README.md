@@ -1,26 +1,19 @@
 # Cripto_PandoraBox: Decifra-me ou te devoro! 🔐
 
 <div id="inicio" align=center>
-  <a href="#sobre">Sobre</a>&nbsp;&nbsp;&nbsp;
+  <a href="#sobre">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;
   <a href="#linguagens">Linguagens Utilizadas</a>&nbsp;&nbsp;&nbsp;
   <a href="#contato">Contato</a> 
-</div>
+</div><br>
 
-<h2>Progresso do Projeto 📈</h2>
+<h2>Progresso do Projeto 📈</h2><br>
 
-<img src="https://raw.githubusercontent.com/camimonteiro/Game_SaidaEscarlate/main/Images/90%25.png" height="40em">
+<img src="https://raw.githubusercontent.com/camimonteiro/Game_SaidaEscarlate/main/Images/90%25.png" height="40em"><br>
 
-<h2 id="sobre">Sobre o projeto🔎</h2>
-<p> Saída Escarlate é uma história de terror original baseada em fatos reais e na lenda amazônica da Matinta Perera. A história foi desenvolvida 
-com base em fatos reais vividos pela autora, com um toque de folclore brasileiro. Embora o gênero da história seja de terror, essa é uma história 
-divertida e cheia de detalhes, por isso fiquem atentos!<br>
+<h2 id="sobre">Sobre o projeto 🔎</h2>
+<p> Cripto - PandoraBox é uma ferramenta de criptografia de texto utilizando dois códigos: Base 64 e Cifra de César, como opções para criptografar a mensagem. A ferramenta permite que os textos sejam tanto criptografados quanto descriptografados.<br>
 
-Na história temos 3 personagens: Ana - A forasteira, Marcos - O anfitrião e Iracema - A velha. 
-Vocês poderão escolher jogar com os 3 personagens e cada um possui uma visão única da história, então vale a pena jogar com os 3.<br>
-
-Esse projeto foi desenvolvido para fins educativos como requisito para conclusão do módulo 1, pela turma 15 do curso de WebDev da Resilia.
-
-Para uma melhor visualização, recomendo <strong>utilizar computador ou notebook para jogar!</strong></p>
+Esse projeto foi desenvolvido para fins educativos pela autora.</p>
 
 
 <h2 id="linguagens">Softwares & Ferramentas utilizadas nesse projeto 📚</h2>
