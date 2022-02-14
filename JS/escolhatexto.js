@@ -1,6 +1,6 @@
 // Muda texto do botão dependendo do que escolhe ~Codificar ou Decodificar
-let botao = document.querySelectorAll('input[name="codificar"]');
-botao.forEach ((radio) => {
+let btn = document.querySelectorAll('input[name="codificar"]');
+btn.forEach ((radio) => {
     radio.addEventListener ("change", function (evento) {
         evento.preventDefault ();
 

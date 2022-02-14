@@ -1,63 +1,56 @@
+// Peguei todos os elementos necessários no HTML
+let textoEntrada = document.getElementById ('textoEntrada');
+let mensagemSaida = document.getElementById ('textoFinal');
+let botao = document.getElementById ('enviar');
+const selecao = document.getElementById ('escolha'); 
+const codificar = document.getElementById ('codificar')
+
+
 // Mostra o resultado final
-function enviar (){
-    const selecao = document.getElementById ('escolha'); 
-    const codificar = document.getElementById ('codificar');
-    const decodificar = document.getElementById ('decodificar');
-   
-    if (textoEntrada.value != '') {
-        const textoEntrada = document.getElementById ('textoEntrada');
-        var mensagem;
-        if (codificar.checked) {
-            mensagem = codificarMensagem (textoEntrada, selecao);
-        } else if (decodificar.checked) {
-            mensagem = decodificarMensagem (textoEntrada, selecao);
-        }
+botao.addEventListener ('click', function (evento) {
+    evento.preventDefault ();
+    if (selecao == 'cifraCesar') {
+        codCifra ();
+    } else {
+        codBase64 ();
+    };
+});
 
-        const mensagemSaida = document.getElementById ('textoFinal');
-        mensagemSaida.value = mensagem;
-    }
-        console.log ('Mensagem inicial: ' + textoEntrada.value);
+// Base 64 - Lógica
+const codBase64 = () => {
+    let entrada = textoEntrada.value;
+    if (codificar.checked) {
+        let baseTextCod = btoa (entrada);
+        mensagemSaida.innerText = baseTextCod;
+    } else {
+        let baseTextDecod = atob (entrada);
+        mensagemSaida.innerText = baseTextDecod;
+    };
 };
 
-// Base 64 e Cifra de Cesar- lógica
+// Cifra de Cesar - lógica
+const codCifra = () => {
+    const alfabeto = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    let entrada = textoEntrada.value;
+    entrada = entrada.toLowerCase();
+    const chave = document.getElementById ('incremento');
+    const incrementoChave = parseInt(chave.value);
+    let textoCodificado = [];
 
-function codificarMensagem (textoEntrada, selecao) {
-    let textoCodificado = '';
-    if (selecao.value == 'base64') {
-        textoCodificado = btoa(textoEntrada.value);
-        console.log ('Mensagem codificada em Base64: ' + textoCodificado);
-    } else {
-        const incrementoChave = document.getElementById ('chaveNumber').value;
-        for (let i = 0; i < textoEntrada.value.length; i++) {
-            let codigo = textoEntrada.value.charCodeAt(i);
-            if (selecao.value == 'cifraCesar') {
-                codigo += incrementoChave;
-                textoCodificado += String.fromCharCode(codigo);
-            }
-            console.log ('Chave César: ' + incrementoChave);
-            console.log ('Mensagem codificada em Cifra de César: ' + textoCodificado);
+    for (let i = 0; i < entrada.length; i++) {
+        if (entrada[i] != ' ') {
+            for (let x = 0; x < alfabeto.length; x++) {
+                if (entrada[i] == alfabeto[x]) {
+                    if (botao.textContent === 'Codificar') {
+                        textoCodificado[i] = alfabeto [(x + incrementoChave)];
+                    } else if (botao.textContent === 'Decodificar') {
+                        textoCodificado[i] = alfabeto[(x - incrementoChave)];
+                    };
+                };
+            };
+        } else {
+            textoCodificado[i] = ' ';
         }
     }
-    return textoCodificado;
-};
-
-function decodificarMensagem (textoEntrada, selecao) {
-    let textoDecodificado = '';
-    if (selecao.value == 'base64') {
-        textoDecodificado = atob(textoEntrada.value);
-        console.log ('Mensagem decodificada em Base64: ' + textoDecodificado);
-    } else {
-        const incrementoChave = document.getElementById ('chaveNumber').value;
-        for (let i = 0; i < textoEntrada.value.length; i++) {
-            let codigo = textoEntrada.value.charCodeAt(i);
-            if (selecao.value == 'cifraCesar') {
-                codigo -= incrementoChave;
-                textoDecodificado += String.fromCharCode(codigo);
-            }
-            console.log(textoEntrada.value.charCodeAt(i));
-        }
-        console.log ('Chave César: ' + incrementoChave)
-        console.log ('Mensagem decodificada em Cifra de César: ' + textoDecodificado);
-    }
-    return textoDecodificado;
+    mensagemSaida.innerText = textoCodificado.join('');
 };
