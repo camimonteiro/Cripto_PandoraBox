@@ -12,7 +12,7 @@
 <img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/100%25.png" height="40em"><br>
 
 <h2 id="sobre">Sobre o projeto 🔎</h2>
-<p> Cripto - PandoraBox é uma ferramenta de criptografia de texto utilizando dois códigos: Base 64 e Cifra de César, como opção para criptografar a mensagem. A ferramenta permite que os textos sejam tanto criptografados quanto descriptografados.<br>
+<p> Cripto - PandoraBox é uma aplicação de criptografia de texto utilizando dois códigos: Base 64 e Cifra de César, como opção para criptografar a mensagem. A ferramenta permite que os textos sejam tanto criptografados quanto descriptografados.<br>
 
 <strong>E ai quem vai ter coragem de abrir essa PandoraBox?</strong>
 
