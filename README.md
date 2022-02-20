@@ -20,11 +20,11 @@ Esse projeto foi desenvolvido para fins educativos.</p>
 
 <h2 id="screenshots">Screenshots 📸</h2>
 
-<img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/Foto%201.png" height="50%"><br>
+<img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/Foto%201.png" width="80%" height="50%"><br>
 
-<img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/Foto%202.png" height="50%"><br>
+<img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/Foto%202.png" width="80%" height="50%"><br>
 
-<img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/Foto%203.png" height="50%"><br>
+<img src="https://raw.githubusercontent.com/camimonteiro/Cripto_PandoraBox/main/Screenshots/Foto%203.png" width="80%" height="50%"><br>
 
 
 <h2 id="linguagens">Softwares & Ferramentas utilizadas nesse projeto 📚</h2>
